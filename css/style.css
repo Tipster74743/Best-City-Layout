@@ -57,6 +57,7 @@ img {
 
 .main-nav a:hover {
 	color: #093a58;
+	background-color: #808080;
 }
 
 /* ---- Layout Containers ---- */
@@ -73,6 +74,12 @@ img {
 .banner {
 	color: #fff;
 	background: #3acec2;
+	padding: 3em 0;
+	margin-bottom: 60px;
+}
+
+.col {
+	padding: 0 1em;
 }
 
 .main-footer {
@@ -87,10 +94,50 @@ img {
 	width: 190px;
 }
 
+.headline{
+	margin-bottom: 0;
+}
+
 /********************************** Media Queries *****/
 
 @media (min-width: 769px) {
 
+	.container {
+		width: 90%;
+		margin: 0 auto;
+	}
+
+	/* ---- Navigation ---- */
+	.main-header::after{
+		content: "";
+		display: table;
+		clear: both;
+	}
+
+	.name,
+	.col{
+		float: left;
+	}
+
+	.main-nav{
+		float: right;
+		margin-top: 15px;
+	}
+
+	.main-nav li{
+		display: inline-block;
+	}
+
+	/* ---- Main Content ---- */
+
+	.primary,
+	.secondary{
+		width: 50%
+	}
+
+	.tagline{
+		font-size: 1.25em;
+	}
 
 
 	/* ---- Float clearfix ---- */
@@ -101,4 +148,25 @@ img {
 		clear: both;
 	}
 
+}
+
+@media (min-width: 1025px){
+
+	.container {
+		width: 80%;
+		max-width: 1150px;
+	}
+
+	.primary {
+		width: 40%
+	}
+
+	.secondary,
+	.tertiary{
+		width: 30%
+	}
+
+	.tagline{
+		font-size: 1.5em;
+	}
 }
